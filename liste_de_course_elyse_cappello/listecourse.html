@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Liste de course</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/fae588965c.js" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+<link rel="stylesheet" href="listecourse.css"/>
+
+<div>
+  <h1>Shop-easy <i class="fa-solid fa-basket-shopping" style="color: #000000;"></i></h1>
+</div>
+
+</head>
+    
+<body>
+<main id="container">
+<h2>Qui sommes-nous ?</h2>
+
+<p>Bienvenue sur notre site de création de liste de courses en ligne ! Nous sommes ravis de vous accueillir et de vous aider à planifier vos achats de manière simple et efficace. Grâce à notre outil convivial, vous pouvez facilement ajouter des articles à votre liste de courses,  produits par catégories et même partager votre liste avec des amis ou des membres de votre famille. Nous espérons que notre service vous simplifiera la vie en vous permettant de gagner du temps et de l'argent lors de vos courses. N'hésitez pas à explorer toutes les fonctionnalités de notre site et à nous faire part de vos commentaires et suggestions pour que nous puissions continuer à améliorer votre expérience de liste de courses en ligne.</p>
+
+<div class="container text-center">
+  <div class="row align-items-start">
+    <div class="col">
+
+      <div class="card" style="width: 18rem;">
+        <img src="fruits.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Nos fruits et légumes</h5>
+          <p class="card-text">Notre plus belle sélection de fruits et légumes à découvrir afin de cuisiner de manière saine et équilibré.</p>
+          <a href="https://www.grandfrais.com/fruits-et-legumes/" class="btn btn-dark">Découvrir</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="pain.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Nos produits céréaliers</h5>
+          <p class="card-text">Et si consommez local et respectueux de l'environnement était possible ? Soutenez les artisans du coin !</p>
+          <a href="https://www.grandfrais.com/epiceries-d-ici-et-d-ailleurs/epicerie-salee/" class="btn btn-dark">En savoir plus</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="epices.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Les épices</h5>
+          <p class="card-text">Assaisonnez vos plats et sublimez-les. Vos papilles vous remercieront</p>
+          <a href="https://www.epices-and-co.fr/?gclid=CjwKCAjw3POhBhBQEiwAqTCuBi6jlhtdhvCUmYcjBt5wrN-_Gz3F_mgo5Zr095nTlgjGig2oecYIKBoCph8QAvD_BwE" class="btn btn-dark">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<h2>Votre liste de course en ligne et pratique</h2>
+<div>
+  <p id="explication"></p>
+
+	  <input type="text" id="input">
+
+	    <button class="ajouter" onclick="ajouter()"><i class="fa-solid fa-plus" style="color: #000000;"></i> Ajouter</button>
+</div>
+
+
+<div>
+  <ul id="liste">
+  </ul>
+</div>
+
+<div>
+  <button class="effacer" onclick="reset()"><i class="fa-solid fa-trash"></i> Effacer</button>
+</div>
+
+<br>
+<h2>Nos astuces</h2>
+
+  <br>
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Comment conserver ses fruits et légumes ?
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Vous pouvez conserver vos fruits et légumes à <strong>température ambiante</strong>, si vous comptez les consommer rapidement, dans les 2 à 3 jours maximum. 
+          L’idéal est de les entreposer dans un endroit frais et sec, à l’abri de la lumière, comme une cave ou un cellier. 
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Congeler sa viande, possible ? 
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Il n’y a rien de plus simple. Il vous suffit de mettre votre viande dans un <strong>sac congélation</strong> et de la stocker dans votre congélateur. Le plus important est d’enlever toute l’air qui se trouvera à l’intérieur du sachet (cela vous permettra une meilleure conservation) et de congeler la viande le jour de son achat.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Mettre sous vide ?
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          La mise sous-vide, c’est le bon moyen de conserver tout ce dont vous avez besoin : fruits, légumes, viandes, poissons, fromages, gâteaux… Et cela en un rien de temps ! Directement en rentrant des courses, vous pouvez mettre sous-vide les aliments qui périssent vite ou que vous souhaitez garder longtemps. Ou alors, quand vous constatez que certains commencent à se gâter ou arrivent à la date de péremption, saisissez votre appareil pour éviter de les jeter.
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <script src="./listecourse.js"></script>
+</main>
+</body>
+
+<footer>
+  <div class="contact">
+    <div class="one">
+    <div>
+    <main>
+      <i class="fa-brands fa-facebook fa-lg" style="color: #000000;"></i> <strong>Facebook</strong>
+    </main>
+    <main>
+      <i class="fa-brands fa-instagram fa-lg" style="color: #000000;"></i> <strong>Instragram</strong>
+    </main>
+    <main>
+      <i class="fa-brands fa-linkedin fa-lg" style="color: #000000;"></i> <strong>Linkedin</strong>
+    </main>
+    </div>
+    </div>
+
+    <div class="two">
+    <main>
+      13 Avenue Jean Jaurès
+    </main>
+    <main>
+    39000 Lavancia
+    </main>
+    <main>
+      FRANCE
+    </main>
+    </div>
+    <div class="three">
+      <main>
+        0718353714
+      </main>
+      <main>
+        shopeasy@contact.fr
+      </main>
+    </div>
+  </div>
+</footer>
